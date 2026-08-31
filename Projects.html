@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Ankush Raj</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        .navbar.sticky-always { 
+            background: crimson; 
+            padding: 15px 0; 
+            position: relative; 
+        }
+        
+        .projects-page { 
+            background: #111; 
+            padding: 100px 0; 
+            min-height: 100vh; 
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .projects-page .title { color: #fff; }
+        .projects-page .title::before { background: #fff; }
+        .projects-page .title::after { background: #111; content: "what I have built"; }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .projects-grid .card {
+            background: #222;
+            border-radius: 6px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .projects-grid .card:hover { background: crimson; }
+        
+        .projects-grid .card img {
+            height: 150px; 
+            width: 150px;
+            object-fit: cover; 
+            border-radius: 50%;
+            border: 5px solid crimson; 
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+        
+        .projects-grid .card:hover img { 
+            border-color: #fff; 
+            transform: scale(1.05); 
+        }
+        
+        .projects-grid .card .text { 
+            font-size: 24px; 
+            font-weight: 500; 
+            color: #fff; 
+            margin-bottom: 5px; 
+        }
+        
+        .projects-grid .card .meta { 
+            font-size: 14px; 
+            color: crimson; 
+            margin-bottom: 15px; 
+            font-weight: 500; 
+        }
+        
+        .projects-grid .card:hover .meta { color: #fff; }
+        
+        .projects-grid .card ul {
+            text-align: left; 
+            margin-top: 10px; 
+            padding-left: 20px;
+            color: #ddd; 
+            font-size: 15px; 
+            line-height: 1.6;
+        }
+        
+        .projects-grid .card .tech {
+            margin-top: 20px; 
+            font-weight: 600; 
+            color: crimson; 
+            font-size: 14px; 
+            text-align: left; 
+            width: 100%;
+            background: rgba(0,0,0,0.2); 
+            padding: 10px; 
+            border-radius: 4px;
+        }
+        
+        .projects-grid .card:hover .tech, 
+        .projects-grid .card:hover ul { color: #fff; }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar sticky-always">
+        <div class="max-width">
+            <div class="logo"><a href="index.html" style="color: #fff; font-size: 35px; font-weight: 600;">Portfo<span style="color: #fff;">lio.</span></a></div>
+            <ul class="menu" style="display: flex;">
+                <!-- Changed link text and directed it back to the tech stack section -->
+                <li><a href="index.html#skills" style="color: #fff; font-size: 18px; font-weight: 500; display: block;">Back to Tech Stack</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Grid Section -->
+    <section class="projects-page" id="projects">
+        <div class="max-width">
+            <h2 class="title">My Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1: RentWise -->
+                <div class="card">
+                    <img src="images/project 2.png" alt="RentWise">
+                    <div class="text">RentWise Tracker</div>
+                    <div class="meta">Aug 2026 | Web Application</div>
+                    <ul>
+                        <li>Engineered a responsive household expense tracker using core web technologies.</li>
+                        <li>Developed JavaScript logic for equal and income weighted cost splits.</li>
+                        <li>Built dynamic affordability dashboards to monitor safe household spending limits.</li>
+                    </ul>
+                    <div class="tech">Tech Stack: HTML5, CSS3, Vanilla JS</div>
+                </div>
+                
+                <!-- Project 2: AI Assistant -->
+                <div class="card">
+                    <img src="images/project 3.png" alt="AI Browser Assistant">
+                    <div class="text">AI Browser Assistant</div>
+                    <div class="meta">Jun 2026 - Jul 2026 | Google AI Studio</div>
+                    <ul>
+                        <li>Built an AI Assistant allowing users to talk to web pages using simple language.</li>
+                        <li>Programmed natural chat features using Google AI to search Google or Wikipedia for facts.</li>
+                        <li>Designed a strict security sandbox using JS to block live page data access.</li>
+                    </ul>
+                    <div class="tech">Tech Stack: Gemini API, JS, CSS, Web APIs</div>
+                </div>
+
+                <!-- Project 3: IoT Alarm -->
+                <div class="card">
+                    <img src="images/project 3;.png" alt="IoT Alarm System">
+                    <div class="text">IoT Alarm System</div>
+                    <div class="meta">Nov 2025 - Dec 2025 | Hardware Project</div>
+                    <ul>
+                        <li>Built an automated farm security system using Arduino/ESP32 for 24/7 monitoring.</li>
+                        <li>Created a smart verification system combining a laser tripwire with an ultrasonic sensor.</li>
+                        <li>Programmed an automatic alarm handling 2 local alerts and a remote warning system.</li>
+                    </ul>
+                    <div class="tech">Tech Stack: Embedded C/C++, Arduino, Blynk IoT</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #111; padding: 15px 23px; color: #fff; text-align: center; border-top: 1px solid #333;">
+        <span>Created By <a href="https://github.com/its-AnkushRaj" style="color: crimson; text-decoration: none;">Ankush Raj</a> | <span
+                class="far fa-copyright"></span> 2026 All rights reserved.</span>
+    </footer>
+
+</body>
+</html>
